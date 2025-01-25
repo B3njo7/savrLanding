@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SavR - Hrana koja inspiriše</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+    
+    <style src="styles.scss">
+        :root {
+            --primary-green: #17d47d; /* Definicija zelene boje */
+        }
+        
+    </style>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+    <!-- Header -->
+    <header class="bg-[#002535] text-white p-4 shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="index.html">
+                    <img src="slike/v2.png" alt="Logo" class="h-16 w-auto object-contain">
+                </a>
+            </div>
+    
+            <!-- Jezički meni za mobilne uređaje -->
+            <div class="relative md:hidden flex items-center space-x-4">
+                <button id="language-button-mobile" class="flex items-center space-x-2 text-white bg-[#002535] hover:bg-[#00404d] px-2 py-1 rounded-md">
+                    <img id="current-flag-mobile" src="/slike/srbijaTaman.png" alt="SRB" class="w-6 h-6">
+                    <span id="current-lang-mobile" class="text-sm font-medium">SRB</span>
+                </button>
+    
+                <div id="language-menu-mobile" class="hidden absolute right-0 mt-2 w-40 bg-white text-gray-800 shadow-lg rounded-md z-50">
+                    <div class="language-option flex items-center px-4 py-3 cursor-pointer hover:bg-gray-100 rounded-t-md" data-lang="sr">
+                        <img src="/slike/srbijaTaman.png" alt="SRB" class="w-6 h-6 mr-3">
+                        <span class="text-sm font-medium">SRB</span>
+                    </div>
+                    <div class="language-option flex items-center px-4 py-3 cursor-pointer hover:bg-gray-100 rounded-b-md" data-lang="en">
+                        <img src="/slike/en.png" alt="ENG" class="w-6 h-6 mr-3">
+                        <span class="text-sm font-medium">ENG</span>
+                    </div>
+                </div>
+    
+                <!-- Hamburger Button -->
+                <button id="hamburger-button" class="md:hidden flex items-center text-white focus:outline-none">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+    
+            <!-- Navigacija -->
+            <nav id="mobile-menu" class="hidden md:flex flex-col md:flex-row md:space-x-6 bg-[#002535] md:bg-transparent absolute md:relative inset-x-0 top-full md:top-auto z-40 md:z-auto transition-all duration-300 ease-in-out p-6 md:p-0">
+                <a href="#home" class="block text-lg font-medium text-white hover:text-gray-300 transition" data-key="nav-home">Početna</a>
+                <a href="#about" class="block text-lg font-medium text-white hover:text-gray-300 transition" data-key="nav-about">O nama</a>
+                <a href="#contact" class="block text-lg font-medium text-white hover:text-gray-300 transition" data-key="nav-contact">Kontakt</a>
+                <a href="pp.html" class="block text-lg font-medium text-white hover:text-gray-300 transition" data-key="nav-privacy">Politika privatnosti</a>
+                <a href="tc.html" class="block text-lg font-medium text-white hover:text-gray-300 transition" data-key="nav-terms">Terms and Conditions</a>
+            </nav>
+    
+            <!-- Jezički meni za desktop -->
+            <div class="relative hidden md:block">
+                <button id="language-button" class="flex items-center space-x-2 text-white bg-[#002535] hover:bg-[#00404d] px-4 py-2 rounded-md shadow-md">
+                    <img id="current-flag" src="/slike/srbijaTaman.png" alt="SRB" class="w-6 h-6">
+                    <span id="current-lang" class="text-sm font-medium">SRB</span>
+                </button>
+    
+                <div id="language-menu" class="hidden absolute right-0 mt-2 w-40 bg-white text-gray-800 shadow-lg rounded-md z-50">
+                    <div class="language-option flex items-center px-4 py-3 cursor-pointer hover:bg-gray-100 rounded-t-md" data-lang="sr">
+                        <img src="/slike/srbijaTaman.png" alt="SRB" class="w-6 h-6 mr-3">
+                        <span class="text-sm font-medium">SRB</span>
+                    </div>
+                    <div class="language-option flex items-center px-4 py-3 cursor-pointer hover:bg-gray-100 rounded-b-md" data-lang="en">
+                        <img src="/slike/en.png" alt="ENG" class="w-6 h-6 mr-3">
+                        <span id="eng" class="text-sm font-medium">ENG</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+    <section id="home" class="bg-[var(--primary-green)] text-white py-20 px-4">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <!-- Leva strana - Slika -->
+            <div class="w-full md:w-1/2 mb-8 md:mb-0 flex justify-center">
+                <img src="/slike/openart-image_jp7mp-ib_1731247142012_raw 1 (1).svg" alt="SavR platforma" class="w-3/4 md:w-full max-w-sm rounded">
+            </div>
+            
+            <!-- Desna strana - Tekst -->
+            <div class="w-full md:w-1/2 text-center md:text-left">
+                <h2 class="text-5xl font-bold" data-key="hero-title">Upoznajte SavR</h2>
+                <p class="text-xl mt-4 font-semibold italic" data-key="hero-subtitle">SavR – kad ušteda znači više.</p>
+                <p class="text-lg mt-4 max-w-3xl mx-auto md:mx-0" data-key="hero-description">
+                    Spas za prirodu i Vaš budžet. Dobrodošli u SavR, platformu koja ima jednostavnu, ali moćnu misiju – da smanji rasipanje hrane i namirnica sa ograničenim rokom trajanja.
+                </p>
+                <a href="#about" class="mt-8 inline-block px-8 py-3 bg-white text-[var(--primary-green)] rounded shadow-lg hover:bg-gray-200 transition" data-key="hero-button">
+                    Saznaj više
+                </a>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+ 
+
+    <section id="about" class="py-16 bg-gray-50 px-4">
+        <div class="container mx-auto flex flex-col md:flex-row-reverse items-center text-center md:text-left">
+            <!-- Desna strana - Slika -->
+            <div class="w-full md:w-1/2 mb-8 md:mb-0 flex justify-center">
+                <img src="/slike/image.svg" alt="SavR Misija" class="w-3/4 md:w-full max-w-md rounded">
+            </div>
+    
+            <!-- Leva strana - Tekst -->
+            <div class="w-full md:w-1/2">
+                <h2 class="text-4xl font-bold mb-8" data-key="about-title">SavR Misija</h2>
+                <p class="text-gray-700 text-lg leading-relaxed max-w-4xl mx-auto md:mx-0 mb-8" data-key="about-paragraph-1">
+                    Dobrodošli u SavR, platformu koja ima jednostavnu, ali moćnu misiju – da smanji rasipanje hrane i namirnica sa ograničenim rokom trajanja.
+                    Naša ideja je jednostavna: spasimo ono što je još uvek korisno i učinimo ga dostupnim svima, po povoljnijim cenama.
+                </p>
+                <p class="text-gray-700 text-lg leading-relaxed max-w-4xl mx-auto md:mx-0 mb-8" data-key="about-paragraph-2">
+                    Naš market place povezuje vas sa trgovcima koji nude proizvode pred istekom roka trajanja, omogućavajući vam da kupujete kvalitetne namirnice,
+                    štedite novac i istovremeno brinete o našoj planeti.
+                </p>
+        
+                <h3 class="text-3xl font-semibold mt-10 mb-6" data-key="about-subtitle">Zašto birati SavR?</h3>
+                <ul class="list-disc list-inside text-lg text-gray-700 max-w-3xl mx-auto md:mx-0 space-y-4">
+                    <li data-key="about-benefit-1"><strong>Štediš</strong> – Ostvari velike uštede kupovinom proizvoda sa sniženim cenama.</li>
+                    <li data-key="about-benefit-2"><strong>Štitiš planetu</strong> – Zajedno smanjujemo otpad i čuvamo prirodne resurse.</li>
+                    <li data-key="about-benefit-3"><strong>Jednostavno koristiš</strong> – Naša aplikacija i sajt su prilagođeni svim korisnicima, od tinejdžera do ekoloških heroja.</li>
+                </ul>
+        
+                <p class="text-gray-700 text-lg leading-relaxed max-w-4xl mx-auto md:mx-0 mt-8" data-key="about-paragraph-3">
+                    Verujemo da svaki mali korak ka očuvanju prirode ima veliki značaj. Naša planeta, naša Majka Priroda, treba našu pomoć – i to odmah!
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    
+
+<section class="py-16 bg-[var(--primary-green)] text-white text-center">
+    <h2 class="text-4xl font-bold mb-6" data-key="cta-title">Pridruži se pokretu!</h2>
+    <p class="text-lg mb-8 max-w-3xl mx-auto" data-key="cta-description">
+        Kupuj pametno, živi odgovorno i inspiriši druge da budu deo promene. Sa SavR-om, tvoj izbor znači više od uštede – on znači budućnost za sve nas.
+    </p>
+    <form id="newsletterForm" class="max-w-lg mx-auto flex flex-col sm:flex-row items-center gap-4">
+        <input type="email" id="emailInput" placeholder="Unesite svoj email" required class="flex-1 px-4 py-2 rounded-md text-gray-800" data-key="cta-input-placeholder">
+        <button type="submit" class="px-6 py-2 bg-white text-[var(--primary-green)] text-lg font-medium rounded shadow hover:bg-gray-200 transition" data-key="cta-button">
+            Prijavi se
+        </button>
+    </form>
+    <div id="newsletterMessage" class="text-white mt-4 hidden"></div>
+</section>
+
+    
+   
+
+<footer class="bg-[#002535] text-white py-8" id="contact">
+    <div class="container mx-auto flex flex-col space-y-6 md:space-y-0 md:flex-row justify-between items-start md:items-center">
+        <!-- Informacije o pravima -->
+        <div class="text-center md:text-left">
+            <p class="text-sm md:text-base" data-key="footer-rights">&copy; 2024 SavR. Sva prava zadržana.</p>
+        </div>
+        <!-- Kontakt sekcija -->
+        <div class="text-center md:text-left space-y-4">
+            <h2 class="text-lg font-semibold" data-key="footer-contact-title">Kontakt</h2>
+            <p class="text-sm md:text-base">
+                Email: 
+                <a href="mailto:office@savr.rs" class="text-white underline hover:text-gray-300">office@savr.rs</a>
+            </p>
+            <p class="text-sm md:text-base" data-key="footer-address">
+                Poštanska adresa: VITEZOVA KARAĐORĐEVE ZVEZDE 55A, stan 14, BEOGRAD (ZVEZDARA), ZVEZDARA, Srbija
+            </p>
+            <p class="text-sm md:text-base" data-key="footer-phone">
+                Telefon: 
+                <a href="tel:+381638898408" class="text-white underline hover:text-gray-300">+381 63 8898408</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+<!-- Modal for Terms and Conditions -->
+<div id="termsModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50 hidden rounded">
+    <div class="bg-white w-11/12 md:w-3/4 lg:w-1/2 xl:w-1/3 rounded shadow-lg p-8 overflow-y-auto max-h-[80vh] md:max-h-[90vh] mt-8 md:mt-0">
+        <h2 class="text-3xl font-bold mb-6 text-center">SavR - Terms and Conditions</h2>
+
+        <h3 class="text-2xl font-semibold mb-4">1. Uvod</h3>
+        <p class="text-gray-700 mb-4">
+            Dobrodošli u SavR, platformu koja povezuje korisnike sa partnerima kao što su restorani,
+            pekare, prodavnice i drugi objekti, radi smanjenja rasipanja hrane. Misija SavR-a je da smanji
+            bacanje hrane pružanjem prilike korisnicima da po sniženim cenama kupe proizvode koji bi
+            inače bili odbačeni.
+        </p>
+        <p class="text-gray-700 mb-4">
+            Korišćenjem Aplikacije, prihvatate da ste upoznati sa i saglasni sa ovim Uslovima korišćenja,
+            kao i sa svim dodatnim politikama i pravilima koja su ovde navedena ili na koja se upućuje,
+            uključujući Politiku privatnosti.
+        </p>
+        <p class="text-gray-700 mb-4">
+            SavR posluje kao paušalni obrt pod nazivom SavR 2024 u vlasništvu Veljko Jokić PR, sa
+            registriranim sedištem na adresi Vitezova Karađorđeve zvezde 55a, Beograd.
+        </p>
+        <p class="text-gray-700 mb-4">
+            Ukoliko imate bilo kakva pitanja u vezi sa ovim Uslovima ili načinom na koji SavR funkcioniše,
+            molimo vas da nas kontaktirate na: <a href="mailto:office@savr.rs" class="text-blue-500 hover:underline">office@savr.rs</a>.
+        </p>
+
+        <h3 class="text-2xl font-semibold mb-4">2. Definicije</h3>
+        <ul class="list-disc pl-5 text-gray-700 mb-4">
+            <li><strong>Korisnik:</strong> Fizičko lice koje koristi aplikaciju SavR za pregled, rezervaciju i kupovinu viška hrane.</li>
+            <li><strong>Partner:</strong> Pravna ili fizička lica, uključujući restorane, pekare, prodavnice i druge ugostiteljske objekte, koji nude hranu putem aplikacije.</li>
+            <li><strong>Rezervacija:</strong> Proces kojim korisnik rezerviše hranu ili proizvode ponuđene od strane Partnera putem aplikacije.</li>
+            <li><strong>Aplikacija:</strong> Mobilna aplikacija / Web-site SavR, uključujući sve povezane funkcionalnosti i usluge.</li>
+            <li><strong>SavR:</strong> Ime platforme koja posluje kao posrednik između Korisnika i Partnera.</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold mb-4">3. Registracija i Korisnički Nalog</h3>
+        <p class="text-gray-700 mb-4">
+            Da biste kreirali i koristili nalog u aplikaciji SavR, morate imati najmanje 18 godina. Prilikom registracije, korisnici su obavezni da pruže tačne, potpune i ažurne informacije, uključujući ime, adresu e-pošte i druge podatke potrebne za registraciju.
+        </p>
+        <p class="text-gray-700 mb-4">
+            Korisnici su odgovorni za čuvanje poverljivosti svojih pristupnih podataka (npr. lozinke) i za sve aktivnosti koje se izvrše putem njihovog naloga. Obavezujete se da nas odmah obavestite u slučaju neovlašćenog pristupa ili upotrebe vašeg naloga.
+        </p>
+
+        <h3 class="text-2xl font-semibold mb-4">4. Korišćenje Aplikacije</h3>
+        <p class="text-gray-700 mb-4">
+            SavR omogućava korisnicima da pregledaju ponude Partnera, uključujući dostupne proizvode i cene, putem intuitivnog korisničkog interfejsa. Korisnici mogu pretraživati i filtrirati ponude prema različitim kriterijumima, kao što su tip hrane, geografska lokacija i vreme preuzimanja.
+        </p>
+        <p class="text-gray-700 mb-4">
+            Korisnici se obavezuju da će preuzeti rezervisane proizvode u predviđenom vremenskom periodu na lokaciji Partnera. U slučaju nepreuzimanja rezervacije, korisnik gubi pravo na povraćaj sredstava, osim ako nije drugačije definisano u ovim Uslovima.
+        </p>
+
+        <h3 class="text-2xl font-semibold mb-4">5. Plaćanja i Povraćaji</h3>
+        <p class="text-gray-700 mb-4">
+            Sve transakcije u aplikaciji SavR obrađuju se preko trećih lica. Politika SavR-a je da ne vrši povraćaj sredstava za rezervacije koje korisnici ne preuzmu u predviđenom vremenskom okviru. Povraćaji sredstava su mogući u slučajevima kada korisnik utvrdi da proizvod ne ispunjava dogovoreni kvalitet.
+        </p>
+
+        <h3 class="text-2xl font-semibold mb-4">6. Odgovornost Partnera za Proizvode</h3>
+        <p class="text-gray-700 mb-4">
+            Partneri su isključivo odgovorni za kvalitet, sastav, bezbednost i sve relevantne informacije o proizvodima koje nude. Korisnici preuzimaju proizvode na sopstvenu odgovornost, a sve eventualne reklamacije moraju biti upućene direktno Partneru.
+        </p>
+
+        <h3 class="text-2xl font-semibold mb-4">7. Prava i Obaveze Korisnika</h3>
+        <p class="text-gray-700 mb-4">
+            Korisnici su obavezni da koriste aplikaciju SavR na zakonit, odgovoran i pristojan način. Zabranjeno je vršenje bilo kakvih radnji koje bi mogle ometati rad aplikacije, narušiti sigurnost ili zloupotrebiti naloge drugih korisnika.
+        </p>
+
+        <h3 class="text-2xl font-semibold mb-4">8. Ograničenje Odgovornosti</h3>
+        <p class="text-gray-700 mb-4">
+            SavR deluje kao posrednik između korisnika i Partnera. Ne preuzimamo odgovornost za kvalitet, sadržaj, bezbednost ili bilo koju karakteristiku proizvoda koje nude Partneri. Korisnici snose punu odgovornost za proveru kvaliteta proizvoda pri preuzimanju.
+        </p>
+
+        <h3 class="text-2xl font-semibold mb-4">9. Politika Privatnosti i Zaštita Podataka</h3>
+        <p class="text-gray-700 mb-4">
+            SavR prikuplja i obrađuje lične podatke korisnika u skladu sa važećim zakonima o zaštiti podataka, uključujući GDPR. Korisnici imaju prava na pristup, ispravku i brisanje svojih podataka, kao i pravo na pritužbu nadležnim organima.
+        </p>
+
+        <h3 class="text-2xl font-semibold mb-4">10. Izmene Uslova</h3>
+        <p class="text-gray-700 mb-4">
+            SavR zadržava pravo da izmeni ili dopuni ove Uslove korišćenja u bilo kom trenutku. Sve izmene će biti objavljene u okviru aplikacije i stupiće na snagu u trenutku objavljivanja, osim ako nije drugačije naznačeno.
+        </p>
+
+        <h3 class="text-2xl font-semibold mb-4">11. Rešavanje Sporova</h3>
+        <p class="text-gray-700 mb-4">
+            Korisnici se podstiču da kontaktiraju SavR putem emaila na <a href="mailto:office@savr.rs" class="text-blue-500 hover:underline">office@savr.rs</a> radi pokušaja neformalnog rešavanja spora. U slučaju spora, nadležnost imaju sudovi Republike Srbije.
+        </p>
+
+        <div class="flex justify-end space-x-4 mt-6">
+            <button id="acceptTerms" class="px-6 py-2 bg-[var(--primary-green)] text-white rounded hover:bg-green-700">
+                Prihvatam
+            </button>
+            <button id="rejectTerms" class="px-6 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400">
+                Odbijam
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- JavaScript for Modal -->
+
+
+
+</body>
+</html>

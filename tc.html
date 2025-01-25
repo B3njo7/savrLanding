@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - SavR</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+    <style>
+        :root {
+            --primary-green: #17d47d;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+    <header class="bg-[#002535] text-white p-4 shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="index.html">
+                    <img src="slike/v2.png" alt="Logo" class="h-16 w-auto object-contain">
+                </a>
+            </div>
+    
+            <!-- Jezički meni za mobilne uređaje -->
+            <div class="relative md:hidden flex items-center space-x-4">
+                <button id="language-button-mobile" class="flex items-center space-x-2 text-white bg-[#002535] hover:bg-[#00404d] px-2 py-1 rounded-md">
+                    <img id="current-flag-mobile" src="/slike/srbijaTaman.png" alt="SRB" class="w-6 h-6">
+                    <span id="current-lang-mobile" class="text-sm font-medium">SRB</span>
+                </button>
+    
+                <div id="language-menu-mobile" class="hidden absolute right-0 mt-2 w-40 bg-white text-gray-800 shadow-lg rounded-md z-50">
+                    <div class="language-option flex items-center px-4 py-3 cursor-pointer hover:bg-gray-100 rounded-t-md" data-lang="sr">
+                        <img src="/slike/srbijaTaman.png" alt="SRB" class="w-6 h-6 mr-3">
+                        <span class="text-sm font-medium">SRB</span>
+                    </div>
+                    <div class="language-option flex items-center px-4 py-3 cursor-pointer hover:bg-gray-100 rounded-b-md" data-lang="en">
+                        <img src="/slike/en.png" alt="ENG" class="w-6 h-6 mr-3">
+                        <span class="text-sm font-medium">ENG</span>
+                    </div>
+                </div>
+    
+                <!-- Hamburger Button -->
+                <button id="hamburger-button" class="md:hidden flex items-center text-white focus:outline-none">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+    
+            <!-- Navigacija -->
+            <nav id="mobile-menu" class="hidden md:flex flex-col md:flex-row md:space-x-6 bg-[#002535] md:bg-transparent absolute md:relative inset-x-0 top-full md:top-auto z-40 md:z-auto transition-all duration-300 ease-in-out p-6 md:p-0">
+                <a href="index.html" class="block text-lg font-medium text-white hover:text-gray-300 transition" data-key="nav-home">Početna</a>
+                <a href="index.html#about" class="block text-lg font-medium text-white hover:text-gray-300 transition" data-key="nav-about">O nama</a>
+                <a href="index.html#contact" class="block text-lg font-medium text-white hover:text-gray-300 transition" data-key="nav-contact">Kontakt</a>
+                <a href="pp.html" class="block text-lg font-medium text-white hover:text-gray-300 transition" data-key="nav-privacy">Politika privatnosti</a>
+                <a href="tc.html" class="block text-lg font-medium text-white hover:text-gray-300 transition" data-key="nav-terms">Terms and Conditions</a>
+            </nav>
+    
+            <!-- Jezički meni za desktop -->
+            <div class="relative hidden md:block">
+                <button id="language-button" class="flex items-center space-x-2 text-white bg-[#002535] hover:bg-[#00404d] px-4 py-2 rounded-md shadow-md">
+                    <img id="current-flag" src="/slike/srbijaTaman.png" alt="SRB" class="w-6 h-6">
+                    <span id="current-lang" class="text-sm font-medium">SRB</span>
+                </button>
+    
+                <div id="language-menu" class="hidden absolute right-0 mt-2 w-40 bg-white text-gray-800 shadow-lg rounded-md z-50">
+                    <div class="language-option flex items-center px-4 py-3 cursor-pointer hover:bg-gray-100 rounded-t-md" data-lang="sr">
+                        <img src="/slike/srbijaTaman.png" alt="SRB" class="w-6 h-6 mr-3">
+                        <span class="text-sm font-medium">SRB</span>
+                    </div>
+                    <div class="language-option flex items-center px-4 py-3 cursor-pointer hover:bg-gray-100 rounded-b-md" data-lang="en">
+                        <img src="/slike/en.png" alt="ENG" class="w-6 h-6 mr-3">
+                        <span id="eng" class="text-sm font-medium">ENG</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-16 px-4 bg-gray-50">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold mb-6" data-key="title-tc">Uslovi korišćenja</h1>
+          
+            <section class="text-left max-w-4xl mx-auto">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-semibold mb-4" data-key="intro-title"></h2>
+                    <p class="text-gray-700" data-key="intro-content"></p>
+                </div>
+            </section>
+
+
+            <section class="text-left max-w-4xl mx-auto">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-semibold mb-4" data-key="definitions-title"></h2>
+                    <p class="text-gray-700" data-key="definitions-content"></p>
+                </div>
+            </section>
+            
+
+            <section class="text-left max-w-4xl mx-auto">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-semibold mb-4" data-key="registration-title"></h2>
+                    <p class="text-gray-700" data-key="registration-content"></p>
+                </div>
+            </section>
+
+            <section class="text-left max-w-4xl mx-auto">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-semibold mb-4" data-key="usage-title"></h2>
+                    <p class="text-gray-700" data-key="usage-content"></p>
+                </div>
+            </section>
+
+            <section class="text-left max-w-4xl mx-auto">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-semibold mb-4" data-key="payments-title"></h2>
+                    <p class="text-gray-700" data-key="payments-content"></p>
+                </div>
+            </section>
+
+
+            <section class="text-left max-w-4xl mx-auto">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-semibold mb-4" data-key="partner-responsibility-title"></h2>
+                    <p class="text-gray-700" data-key="partner-responsibility-content"></p>
+                </div>
+            </section>
+
+            <section class="text-left max-w-4xl mx-auto">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-semibold mb-4" data-key="user-rights-title"></h2>
+                    <p class="text-gray-700" data-key="user-rights-content"></p>
+                </div>
+            </section>
+            
+            <section class="text-left max-w-4xl mx-auto">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-semibold mb-4" data-key="liability-title"></h2>
+                    <p class="text-gray-700" data-key="liability-content"></p>
+                </div>
+            </section>
+            
+
+            <section class="text-left max-w-4xl mx-auto">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-semibold mb-4" data-key="privacy-policy-title"></h2>
+                    <p class="text-gray-700" data-key="privacy-policy-content"></p>
+                </div>
+            </section>
+
+
+            <section class="text-left max-w-4xl mx-auto">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-semibold mb-4" data-key="terms-changes-title"></h2>
+                    <p class="text-gray-700" data-key="terms-changes-content"></p>
+                </div>
+            </section>
+
+            <section class="text-left max-w-4xl mx-auto">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-semibold mb-4" data-key="dispute-resolution-title"></h2>
+                    <p class="text-gray-700" data-key="dispute-resolution-content"></p>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+            <a href="index.html" class="mt-6 inline-block bg-[var(--primary-green)] text-white px-6 py-2 rounded shadow hover:bg-green-700 transition" data-key="btn-home">Nazad na Početnu</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#002535] text-white py-8 text-center">
+        <p data-key="footer-pp">&copy; 2024 SavR. Sva prava zadržana.</p>
+    </footer>
+</body>
+</html>

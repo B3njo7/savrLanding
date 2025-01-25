@@ -1,0 +1,6 @@
+@supports (-webkit-overflow-scrolling: touch) {
+    body.modal-open {
+        position: fixed;
+        width: 100%;
+    }
+}
